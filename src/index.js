@@ -49,7 +49,7 @@ app.use(methodOverride('_method'));
 // HTTP logger
 // app.use(morgan('combined'));
 
-// Template engine
+// Template engines
 app.engine(
     'hbs',
     handlebars({
