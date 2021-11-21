@@ -18,7 +18,9 @@ const connectDB = async () => {
       URL,
       { 
         useNewUrlParser: true,
-        useUnifiedTopology: true
+        useUnifiedTopology: true,
+        useFindAndModify: false,
+        useCreateIndex: true
       }
     )
 
