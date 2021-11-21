@@ -10,7 +10,8 @@ const route = require('./routes');
 // Connect to DB
 //db.connect();
 
-const URL = 'mongodb+srv://huyhung:hung@cluster0.s4zxa.mongodb.net/f8_education_dev?retryWrites=true&w=majority'
+// const URL = 'mongodb+srv://huyhung:hung@cluster0.s4zxa.mongodb.net/f8_education_dev?retryWrites=true&w=majority'
+const URL = 'mongodb://mongo:8kO3TS1n4LEaoB4TlZfI@containers-us-west-11.railway.app:5624'
 
 const connectDB = async () => {
   try {
