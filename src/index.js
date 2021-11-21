@@ -3,12 +3,33 @@ const express = require('express');
 const morgan = require('morgan');
 const methodOverride = require('method-override');
 const handlebars = require('express-handlebars');
-
+const mongoose = require('mongoose');
 const route = require('./routes');
-const db = require('./config/db');
+//const db = require('./config/db');
 //dsajdsahjh
 // Connect to DB
-db.connect();
+//db.connect();
+
+const URL = 'mongodb+srv://huyhung:hung@cluster0.s4zxa.mongodb.net/f8_education_dev?retryWrites=true&w=majority'
+
+const connectDB = async () => {
+  try {
+    await mongoose.connect(
+      URL,
+      { 
+        useNewUrlParser: true,
+        useUnifiedTopology: true
+      }
+    )
+
+    console.log('Connected to mongoDB')
+  } catch (error) {
+    console.log(error)
+    process.exit(1)
+  }
+}
+
+connectDB()
 
 const app = express();
 const port = 3000;
