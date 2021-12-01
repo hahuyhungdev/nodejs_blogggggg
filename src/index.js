@@ -5,8 +5,7 @@ const methodOverride = require('method-override');
 const handlebars = require('express-handlebars');
 const mongoose = require('mongoose');
 const route = require('./routes');
-//const db = require('./config/db');
-//dsajdsahjh
+
 // Connect to DB
 //db.connect();
 
